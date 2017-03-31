@@ -1,6 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { JhiTrackerService } from './../shared/tracker/tracker.service';
 
 import { BubuxSharedModule } from '../shared';
 
@@ -24,7 +23,6 @@ import {
     JhiConfigurationService,
     JhiHealthService,
     JhiMetricsService,
-    JhiTrackerComponent,
     LogsService,
     UserResolvePagingParams,
     UserResolve,
@@ -50,7 +48,6 @@ import {
         JhiHealthCheckComponent,
         JhiHealthModalComponent,
         JhiDocsComponent,
-        JhiTrackerComponent,
         JhiMetricsMonitoringComponent,
         JhiMetricsMonitoringModalComponent
     ],
@@ -66,7 +63,6 @@ import {
         JhiHealthService,
         JhiMetricsService,
         LogsService,
-        JhiTrackerService,
         UserResolvePagingParams,
         UserResolve,
         UserModalService

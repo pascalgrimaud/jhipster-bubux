@@ -12,7 +12,7 @@
     "authenticationType": "jwt",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
-    "websocket": "spring-websocket",
+    "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "postgresql",
     "prodDatabaseType": "postgresql",

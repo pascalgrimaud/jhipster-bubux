@@ -7,7 +7,6 @@ import {
     healthRoute,
     logsRoute,
     metricsRoute,
-    trackerRoute,
     userMgmtRoute,
     userDialogRoute
 } from './';
@@ -20,7 +19,6 @@ let ADMIN_ROUTES = [
     docsRoute,
     healthRoute,
     logsRoute,
-    trackerRoute,
     ...userMgmtRoute,
     metricsRoute
 ];

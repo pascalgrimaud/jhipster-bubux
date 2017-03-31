@@ -17,8 +17,6 @@ module.exports = {
             'jquery',
             'ng-jhipster',
             'ng2-webstorage',
-            'sockjs-client',
-            'webstomp-client',
             'rxjs'
         ]
     },
