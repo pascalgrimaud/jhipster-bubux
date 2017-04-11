@@ -29,7 +29,7 @@ export class JhiMetricsMonitoringComponent implements OnInit {
         this.refresh();
     }
 
-    refresh () {
+    refresh() {
         this.updatingMetrics = true;
         this.metricsService.getMetrics().subscribe((metrics) => {
             this.metrics = metrics;
@@ -59,7 +59,7 @@ export class JhiMetricsMonitoringComponent implements OnInit {
         });
     }
 
-    refreshThreadDumpData () {
+    refreshThreadDumpData() {
         this.metricsService.threadDump().subscribe((data) => {
             const modalRef  = this.modalService.open(JhiMetricsMonitoringModalComponent, { size: 'lg'});
             modalRef.componentInstance.threadDump = data;

@@ -7,13 +7,13 @@ import { AuthServerProvider } from '../auth/auth-jwt.service';
 @Injectable()
 export class LoginService {
 
-    constructor (
+    constructor(
         private languageService: JhiLanguageService,
         private principal: Principal,
         private authServerProvider: AuthServerProvider
     ) {}
 
-    login (credentials, callback?) {
+    login(credentials, callback?) {
         let cb = callback || function() {};
 
         return new Promise((resolve, reject) => {
@@ -38,7 +38,7 @@ export class LoginService {
         return this.authServerProvider.loginWithToken(jwt, rememberMe);
     }
 
-    logout () {
+    logout() {
         this.authServerProvider.logout().subscribe();
         this.principal.authenticate(null);
     }

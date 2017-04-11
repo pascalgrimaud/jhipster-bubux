@@ -18,7 +18,7 @@ export class UserMgmtDialogComponent implements OnInit {
     authorities: any[];
     isSaving: Boolean;
 
-    constructor (
+    constructor(
         public activeModal: NgbActiveModal,
         private languageHelper: JhiLanguageHelper,
         private jhiLanguageService: JhiLanguageService,
@@ -68,7 +68,7 @@ export class UserDialogComponent implements OnInit, OnDestroy {
     modalRef: NgbModalRef;
     routeSub: any;
 
-    constructor (
+    constructor(
         private route: ActivatedRoute,
         private userModalService: UserModalService
     ) {}
