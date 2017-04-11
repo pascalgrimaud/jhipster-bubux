@@ -8,7 +8,6 @@ machine:
 dependencies:
     cache_directories:
         - ~/.m2
-        - $HOME/.yarn-cache
     override:
         - java -version
         # Repo for Yarn
