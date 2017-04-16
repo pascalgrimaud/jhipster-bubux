@@ -4,7 +4,7 @@ machine:
     java:
         version: oraclejdk8
     node:
-        version: 6.10.0
+        version: 6.10.2
 dependencies:
     cache_directories:
         - ~/.m2
