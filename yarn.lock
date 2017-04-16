@@ -3220,14 +3220,14 @@ http-proxy-middleware@~0.17.1, http-proxy-middleware@~0.17.4:
     lodash "^4.17.2"
     micromatch "^2.3.11"
 
-http-proxy@1.15.2:
+http-proxy@1.15.2, http-proxy@^1.13.0:
   version "1.15.2"
   resolved http-proxy-1.15.2.tgz#642fdcaffe52d3448d2bda3b0079e9409064da31
   dependencies:
     eventemitter3 "1.x.x"
     requires-port "1.x.x"
 
-http-proxy@^1.13.0, http-proxy@^1.16.2:
+http-proxy@^1.16.2:
   version "1.16.2"
   resolved http-proxy-1.16.2.tgz#06dff292952bf64dbe8471fa9df73066d4f37742
   dependencies:
@@ -5962,7 +5962,7 @@ request-progress@~2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@2, request@^2.72.0, request@^2.78.0, request@^2.79.0, request@~2.79.0:
+request@2, request@^2.40.0, request@^2.72.0, request@^2.74.0, request@^2.78.0, request@^2.79.0, request@~2.79.0:
   version "2.79.0"
   resolved request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de
   dependencies:
@@ -6012,7 +6012,7 @@ request@2.78.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
-request@^2.40.0, request@^2.74.0, request@^2.81.0:
+request@^2.81.0:
   version "2.81.0"
   resolved request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0
   dependencies:
@@ -7104,13 +7104,9 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777
 
-typescript@2.2.2:
+typescript@2.2.2, "typescript@>=2.0.0 <2.3.0":
   version "2.2.2"
   resolved typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c
-
-"typescript@>=2.0.0 <2.3.0":
-  version "2.2.1"
-  resolved typescript-2.2.1.tgz#4862b662b988a4c8ff691cc7969622d24db76ae9
 
 ua-parser-js@0.7.12, ua-parser-js@^0.7.9:
   version "0.7.12"
@@ -7655,14 +7651,14 @@ write-file-webpack-plugin@3.4.2:
     mkdirp "^0.5.1"
     moment "^2.11.2"
 
-ws@1.1.1, ws@^1.0.1:
+ws@1.1.1:
   version "1.1.1"
   resolved ws-1.1.1.tgz#082ddb6c641e85d4bb451f03d52f06eabdb1f018
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
 
-ws@1.1.2:
+ws@1.1.2, ws@^1.0.1:
   version "1.1.2"
   resolved ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f
   dependencies:
