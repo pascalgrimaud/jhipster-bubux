@@ -17,17 +17,15 @@ export class AuthExpiredInterceptor extends HttpInterceptor {
     }
 
     responseIntercept(observable: Observable<Response>): Observable<Response> {
-        let self = this;
-
         return <Observable<Response>> observable.catch((error, source) => {
             if (error.status === 401) {
-                let principal: Principal = self.injector.get(Principal);
+                const principal: Principal = this.injector.get(Principal);
 
                 if (principal.isAuthenticated()) {
-                    let auth: AuthService = self.injector.get(AuthService);
+                    const auth: AuthService = this.injector.get(AuthService);
                     auth.authorize(true);
                 } else {
-                    let authServerProvider: AuthServerProvider = self.injector.get(AuthServerProvider);
+                    const authServerProvider: AuthServerProvider = this.injector.get(AuthServerProvider);
                     authServerProvider.logout();
                 }
             }

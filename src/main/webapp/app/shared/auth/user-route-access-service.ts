@@ -16,12 +16,18 @@ export class UserRouteAccessService implements CanActivate {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Promise<boolean> {
-        return this.checkLogin(route.data['authorities'], state.url);
+
+        const authorities = route.data['authorities'];
+        if (!authorities || authorities.length === 0) {
+            return true;
+        }
+
+        return this.checkLogin(authorities, state.url);
     }
 
     checkLogin(authorities: string[], url: string): Promise<boolean> {
-        let principal = this.principal;
-        return Promise.resolve(principal.identity().then(account => {
+        const principal = this.principal;
+        return Promise.resolve(principal.identity().then((account) => {
 
             if (account && principal.hasAnyAuthority(authorities)) {
                 return true;

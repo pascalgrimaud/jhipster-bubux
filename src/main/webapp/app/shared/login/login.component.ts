@@ -3,7 +3,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { JhiLanguageService, EventManager } from 'ng-jhipster';
 
-import { LoginService } from '../login/login.service';
+import { LoginService } from './login.service';
 import { StateStorageService } from '../auth/state-storage.service';
 
 @Component({
@@ -68,7 +68,7 @@ export class JhiLoginModalComponent implements OnInit, AfterViewInit {
 
             // // previousState was set in the authExpiredInterceptor before being redirected to login modal.
             // // since login is succesful, go to stored previousState and clear previousState
-            let redirect = this.stateStorageService.getUrl();
+            const redirect = this.stateStorageService.getUrl();
             if (redirect) {
                 this.router.navigate([redirect]);
             }

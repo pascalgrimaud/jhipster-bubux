@@ -38,7 +38,7 @@ export class Principal {
            return Promise.resolve(false);
         }
 
-        return this.identity().then(id => {
+        return this.identity().then((id) => {
             return Promise.resolve(id.authorities && id.authorities.indexOf(authority) !== -1);
         }, () => {
             return Promise.resolve(false);
@@ -57,7 +57,7 @@ export class Principal {
         }
 
         // retrieve the userIdentity data from the server, update the identity object, and then resolve.
-        return this.account.get().toPromise().then(account => {
+        return this.account.get().toPromise().then((account) => {
             if (account) {
                 this.userIdentity = account;
                 this.authenticated = true;
@@ -67,7 +67,7 @@ export class Principal {
             }
             this.authenticationState.next(this.userIdentity);
             return this.userIdentity;
-        }).catch(err => {
+        }).catch((err) => {
             this.userIdentity = null;
             this.authenticated = false;
             this.authenticationState.next(this.userIdentity);
